@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <audio
+      id="bgMusic"
+      src="public/audio/Beautiful-In-White.mp3"
+      loop
+      preload="auto"
+    ></audio>
+
+    <div class="floating-menu">
+      <button
+        id="btnMusic"
+        class="menu-btn"
+        type="button"
+        aria-label="Putar atau matikan musik"
+      >
+        <i class="bi bi-volume-mute-fill"></i>
+      </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section text-center">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+        data-bs-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="public\img\hero1.png" class="hero-img" alt="Foto 1" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero2.png" class="hero-img" alt="Foto 2" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero3.png" class="hero-img" alt="Foto 3" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="greeting-1">Kami Mengundang Anda untuk Hadir</p>
+        <p class="greeting-2">Dalam Acara Pernikahan</p>
+        <h1 class="display-3">Davin & Celine</h1>
+        <div
+          class="d-flex gap-3 text-center justify-content-center"
+          id="countdown"
+        >
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="hari">0</div>
+            <div>Hari</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="jam">0</div>
+            <div>Jam</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="menit">0</div>
+            <div>Menit</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="detik">0</div>
+            <div>Detik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEDUA MEMPELAI -->
+    <section
+      id="mempelai"
+      class="mempelai-section d-flex flex-column align-items-center"
+    >
+      <img src="public/img/bg1-1.png" class="section-bg bg-left" alt="" />
+      <img src="public/img/bg1-2.png" class="section-bg bg-right" alt="" />
+      <h1 class="title-mempelai reveal">Kedua Mempelai</h1>
+      <p class="reveal text-center">
+        Atas rahmat Tuhan Yang Maha Esa, kami mengundang Bapak/Ibu/Saudara/i
+        untuk hadir dan memberikan doa restu pada hari istimewa kami.
+      </p>
+      <div class="d-flex flex-row justify-content-center gap-3 mt-4 reveal">
+        <div class="couple-card px-5 py-4 align-items-center">
+          <img src="public\img\man.png" width="70%" alt="" />
+          <br />
+          <h1>Davin Alexander</h1>
+          <p>Putra dari Bapak Jonathan Alexander dan Ibu Maria Natalia</p>
+        </div>
+        <div class="couple-card p-5 py-4 align-items-center">
+          <img src="public\img\woman.png" alt="" width="70%" />
+          <br />
+          <h1>Celine Natasha</h1>
+          <p>Putri dari Bapak Daniel Wijaya dan Ibu Clarissa Maharani</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAIL ACARA -->
+    <section
+      class="detail-acara d-flex flex-column justify-content-center align-items-center mt-5"
+    >
+      <img src="public/img/bg2-1.png" class="section-bg bg-left" alt="" />
+      <img src="public/img/bg2-2.png" class="section-bg bg-right" alt="" />
+      <div class="title-detail text-center reveal">
+        <h1>Detail Acara</h1>
+        <p class="">
+          Dengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk
+          hadir dan memberikan doa restu pada acara pernikahan kami.
+        </p>
+        <br />
+      </div>
+      <div class="d-flex flex-row gap-5 reveal">
+        <div
+          class="detail-acara-card card p-5 flex justify-content-end align-items-center text-center"
+        >
+          <h5>AKAD PERNIKAHAN</h5>
+          <p>Jumat</p>
+          <div class="tanggal">
+            <div>2</div>
+            <div>November</div>
+            <div>2026</div>
+          </div>
+          <p>08.00 - 12.00 WIB</p>
+          <p>Surabaya, Indonesia</p>
+          <a
+            href="https://maps.app.goo.gl/jp26gsHYRnTbxgQ29"
+            class="btn btn-dark px-3 py-1"
+            >Lihat Lokasi</a
+          >
+        </div>
+        <div
+          class="detail-acara-card card p-5 flex justify-content-end align-items-center text-center"
+        >
+          <h5>RESEPSI PERNIKAHAN</h5>
+          <p>Minggu</p>
+          <div class="tanggal">
+            <div>2</div>
+            <div>November</div>
+            <div>2026</div>
+          </div>
+          <p>19.30–23.00 WIB</p>
+          <p>Surabaya, Indonesia</p>
+          <a
+            href="https://maps.app.goo.gl/jp26gsHYRnTbxgQ29"
+            class="btn btn-dark px-3 py-1"
+            >Lihat Lokasi</a
+          >
+        </div>
+      </div>
+      <div class="reveal">
+        <br />
+        <p class="text-center">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+        </p>
+      </div>
+    </section>
+
+    <!-- KISAH KAMI -->
+    <section
+      class="kisah-kami d-flex flex-column align-items-center justify-content-center mt-5"
+    >
+      <img src="public/img/bg3-1.png" class="section-bg bg-left" alt="" />
+      <img src="public/img/bg3-2.png" class="section-bg bg-right" alt="" />
+      <div class="title-kisah-kami text-center mb-5 reveal">
+        <h1>Kisah Kami</h1>
+        <p>
+          Setiap pertemuan memiliki ceritanya sendiri. Bagi kami, perjalanan ini
+          menjadi awal dari kisah indah yang membawa dua hati menuju satu
+          tujuan.
+        </p>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="d-flex justify-content-between reveal">
+          <div class="story card text-center">
+            <h3>Pertemuan</h3>
+            <p>
+              Kami pertama kali bertemu tanpa pernah menyangka bahwa pertemuan
+              sederhana tersebut akan menjadi awal dari cerita panjang kami.
+              Seiring berjalannya waktu, percakapan kecil berubah menjadi
+              kedekatan, hingga kami menyadari bahwa kehadiran satu sama lain
+              membawa kebahagiaan tersendiri.
+            </p>
+          </div>
+          <div class="story card text-center">
+            <h3>Pernikahan</h3>
+            <p>
+              Kini, dengan penuh rasa syukur, kami memutuskan untuk mengikat
+              janji suci pernikahan. Kami percaya bahwa perjalanan baru ini akan
+              menjadi awal dari banyak cerita yang akan kami tulis bersama,
+              dengan cinta, kesetiaan, dan doa yang menyertai setiap langkah.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-line">
+          <span class="dot dot-left">1</span>
+          <span class="dot dot-center">2</span>
+          <span class="dot dot-right">3</span>
+        </div>
+
+        <div class="d-flex justify-content-center reveal">
+          <div class="story card text-center">
+            <h3>Komitmen</h3>
+            <p>
+              Seiring waktu, kami belajar untuk saling memahami, menghargai, dan
+              menerima kekurangan masing-masing. Dari berbagai cerita dan
+              perjalanan yang kami lalui bersama, tumbuh keyakinan untuk
+              melangkah lebih jauh dan membangun masa depan bersama.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section
+      class="rsvp mt-5 d-flex flex-column justify-content-center align-items-center"
+    >
+      <img src="public/img/bg1-1.png" class="section-bg bg-left" alt="" />
+      <img src="public/img/bg1-2.png" class="section-bg bg-right" alt="" />
+      <div class="text-center reveal">
+        <h1>RSVP</h1>
+        <p>
+          Mohon konfirmasi kehadiran Anda melalui formulir RSVP di bawah ini.
+          Kehadiran dan doa restu Anda merupakan kebahagiaan bagi kami.
+        </p>
+      </div>
+      <div class="w-25">
+        <form action="" class="form-kehadiran d-flex flex-column reveal">
+          <p>Nama</p>
+          <input type="text" class="w-100" />
+          <p>Doa & Ucapan</p>
+          <input type="text" />
+          <p>Kehadiran</p>
+          <div class="kehadiran d-flex gap-2">
+            <label
+              class="border rounded p-2 w-50 d-flex align-items-center gap-2"
+            >
+              <input
+                type="radio"
+                name="kehadiran"
+                value="Hadir"
+                class="form-check-input m-0 flex-shrink-0"
+                required
+              />
+              <span>Hadir</span>
+            </label>
+            <label
+              class="border rounded p-2 w-50 d-flex align-items-center gap-2"
+            >
+              <input
+                type="radio"
+                name="kehadiran"
+                value="Tidak Hadir"
+                class="form-check-input m-0 flex-shrink-0"
+                required
+              />
+              <span>Tidak Hadir</span>
+            </label>
+          </div>
+          <p>Jumlah tamu</p>
+          <input type="text" />
+          <button type="submit" class="kirim btn btn-dark px-3 py-1">
+            Kirim
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- GALERI KENANGAN -->
+    <section
+      class="galeri-kenangan mt-5 d-flex flex-column align-items-center justify-content-center"
+    >
+      <img src="public/img/bg2-1.png" class="section-bg bg-left" alt="" />
+      <img src="public/img/bg2-2.png" class="section-bg bg-right" alt="" />
+      <div class="title-galeri-kenangan text-center w-100 reveal">
+        <h1>Galeri Kenangan</h1>
+        <br />
+
+        <div
+          id="carouselExampleControlsNoTouching"
+          class="carousel slide"
+          data-bs-touch="false"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="public/img/galery1.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="public/img/galery2.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="public/img/galery3.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="public/img/galery4.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="public/img/galery5.png"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TANDA KASIH -->
+    <section
+      class="tanda-kasih mt-5 d-flex flex-column align-items-center justify-content-center"
+    >
+      <div class="text-center reveal">
+        <h1>Tanda Kasih</h1>
+        <p>
+          Kehadiran dan doa baik dari Anda selalu punya tempat istimewa di hati
+          kami.
+        </p>
+        <br />
+      </div>
+      <div class="d-flex flex-row gap-3 reveal">
+        <div class="rekening card position-relative">
+          <img
+            src="public/img/bank-card.png"
+            class="bank-card w-100 d-block"
+            alt="Kartu bank"
+          />
+          <img
+            src="public/img/bca.png"
+            width="25%"
+            class="position-absolute top-0 end-0 m-3"
+            alt="BCA"
+          />
+          <p class="position-absolute bottom-0 start-0 m-3 mb-5 text-dark ms-5">
+            12344 5672 8905 7327
+          </p>
+        </div>
+
+        <div class="rekening card position-relative">
+          <img
+            src="public/img/bank-card.png"
+            class="bank-card w-100 d-block"
+            alt="Kartu bank"
+          />
+          <img
+            src="public/img/bni.png"
+            width="25%"
+            class="position-absolute top-0 end-0 m-3"
+            alt="BNI"
+          />
+          <p class="position-absolute bottom-0 start-0 m-3 mb-5 text-dark ms-5">
+            0123 4567 8901 2346
+          </p>
+        </div>
+
+        <div class="rekening card position-relative">
+          <img
+            src="public/img/bank-card.png"
+            class="bank-card w-100 d-block"
+            alt="Kartu bank"
+          />
+          <img
+            src="public/img/bri.png"
+            width="23%"
+            class="position-absolute top-0 end-0 m-3"
+            alt="BRI"
+          />
+          <p class="position-absolute bottom-0 start-0 m-3 mb-5 text-dark ms-5">
+            0812 3456 7890 3456
+          </p>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+
+    <!-- TERIMA KASIH -->
+    <section class="terimakasih text-center">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+        data-bs-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="public\img\hero1.png" class="hero-img" alt="Foto 1" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero2.png" class="hero-img" alt="Foto 2" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero3.png" class="hero-img" alt="Foto 3" />
+          </div>
+        </div>
+      </div>
+
+      <div class="terimakasih-content">
+        <h1 class="display-3">Davin & Celine</h1>
+        <p class="greeting-1">Terimakasih</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

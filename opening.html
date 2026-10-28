@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero-section text-center">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="5000"
+        data-bs-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="public\img\hero1.png" class="hero-img" alt="Foto 1" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero2.png" class="hero-img" alt="Foto 2" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="public\img\hero3.png" class="hero-img" alt="Foto 3" />
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="greeting-1">Kami Mengundang Anda untuk Hadir</p>
+        <p class="greeting-2">Dalam Acara Pernikahan</p>
+        <h1 class="display-3">Davin & Celine</h1>
+        <div
+          class="d-flex gap-3 text-center justify-content-center"
+          id="countdown"
+        >
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="hari">0</div>
+            <div>Hari</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="jam">0</div>
+            <div>Jam</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="menit">0</div>
+            <div>Menit</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="fs-2 fw-bold" id="detik">0</div>
+            <div>Detik</div>
+          </div>
+        </div>
+        <a href="index.html" id="btnBuka" class="btn btn-dark px-4 py-2"
+          >Lihat Undangan</a
+        >
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

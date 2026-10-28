@@ -1,0 +1,602 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond";
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.floating-menu {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1050;
+}
+
+.menu-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 15px;
+  background: #212529;
+  color: #fff;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: scale(1.08);
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#heroCarousel,
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+.hero-content a {
+  margin-top: 3rem;
+}
+
+#heroCarousel .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+.greeting-1 {
+  font-size: 24px;
+}
+
+.greeting-2 {
+  font-size: 20px;
+}
+
+.display-3 {
+  font-family: "Great Vibes";
+  font-size: 7rem;
+}
+
+.title-mempelai {
+  font-family: "Great Vibes";
+  padding-top: 4rem;
+}
+
+.mempelai-section,
+.detail-acara,
+.kisah-kami,
+.rsvp,
+.galeri-kenangan,
+.tanda-kasih {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: 50%;
+  object-fit: contain;
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.bg-left {
+  left: 0;
+  object-position: left center;
+}
+
+.bg-right {
+  right: 0;
+  object-position: right center;
+}
+
+.mempelai-section > *:not(.section-bg),
+.detail-acara > *:not(.section-bg),
+.kisah-kami > *:not(.section-bg),
+.rsvp > *:not(.section-bg),
+.galeri-kenangan > *:not(.section-bg),
+.tanda-kasih > *:not(.section-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.couple-card {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.couple-card h1 {
+  font-family: "Great Vibes";
+}
+
+.couple-card img {
+  border: 5px solid #212529;
+  border-radius: 100%;
+}
+
+.detail-acara {
+  padding-top: 3rem;
+}
+
+.title-detail h1 {
+  font-family: "Great Vibes";
+}
+
+.detail-acara-card {
+  margin: 0;
+  min-height: 22rem;
+  width: 20rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  gap: 12px;
+}
+
+.detail-acara-card > * {
+  margin: 0;
+}
+
+.tanggal {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.tanggal div {
+  padding: 5px 15px;
+  text-align: center;
+}
+
+.tanggal div:nth-child(1) {
+  text-align: right;
+}
+
+.tanggal div:nth-child(3) {
+  text-align: left;
+}
+
+.tanggal div:nth-child(2) {
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+}
+
+.detail-acara-card a {
+  font-family: "Google Sans";
+  font-size: 13px;
+}
+
+.title-detail {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.kisah-kami h1 {
+  font-family: "Great Vibes";
+}
+
+.title-kisah-kami {
+  padding-top: 4rem;
+}
+
+.kisah-kami {
+  padding-left: 13rem;
+  padding-right: 13rem;
+  padding-bottom: 2rem;
+}
+
+.timeline-wrap {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 16px;
+}
+
+.story {
+  width: 40%;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition:
+    scale 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.story:hover {
+  scale: 1.01;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.story p {
+  text-align: justify;
+}
+
+.timeline-line {
+  position: relative;
+  height: 64px;
+  margin: 8px 0;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 22.5%;
+  right: 22.5%;
+  height: 3px;
+  background: #212529;
+  transform: translateY(-50%);
+}
+
+.dot {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #212529;
+  color: #212529;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+}
+
+.dot-left {
+  left: 22.5%;
+}
+.dot-center {
+  left: 50%;
+}
+.dot-right {
+  left: 77.5%;
+}
+
+.rsvp {
+  padding-top: 4rem;
+}
+
+.rsvp h1 {
+  font-family: "Great Vibes";
+}
+
+.form-kehadiran p {
+  margin: 0;
+}
+
+.form-kehadiran input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 203, 203);
+  padding: 10px;
+  font-family: "Google Sans";
+  font-size: 15px;
+}
+
+.form-kehadiran input:hover {
+  border: 1px solid black;
+  transition: all 0.5s ease;
+}
+
+.kehadiran label {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.kehadiran label:hover {
+  border: 1px solid black;
+}
+
+.kirim {
+  font-family: "Google Sans";
+  font-size: 15px;
+}
+
+.galeri-kenangan {
+  padding-top: 4rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+#carouselExampleControlsNoTouching .carousel-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.title-galeri-kenangan h1 {
+  font-family: "Great Vibes";
+}
+
+.tanda-kasih {
+  padding-top: 4rem;
+}
+
+.tanda-kasih h1 {
+  font-family: "Great Vibes";
+}
+
+.rekening {
+  width: 23rem;
+  height: auto;
+  border-radius: 15px;
+  cursor: pointer;
+  transition:
+    scale 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.rekening:hover {
+  scale: 1.01;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.rekening .bank-card {
+  border-radius: 15px;
+}
+
+.rekening p {
+  font-family: "Google Sans";
+  font-weight: 600;
+}
+
+.terimakasih h1 {
+  font-family: "Great Vibes";
+}
+
+.terimakasih {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.terimakasih #heroCarousel,
+.terimakasih .carousel-inner,
+.terimakasih .carousel-item {
+  height: 100%;
+}
+
+.terimakasih-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+/* ≤ 992px */
+@media (max-width: 992px) {
+  .display-3 {
+    font-size: 5rem;
+  }
+
+  .mempelai-section > .d-flex,
+  .detail-acara > .d-flex,
+  .tanda-kasih > .d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .couple-card {
+    width: min(30rem, 100%);
+  }
+
+  .title-detail {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .kisah-kami {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .galeri-kenangan {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  #carouselExampleControlsNoTouching .carousel-item img {
+    height: 450px;
+  }
+
+  .rsvp .w-25 {
+    width: 50% !important;
+  }
+}
+
+/* ≤ 768px */
+@media (max-width: 768px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  .display-3 {
+    font-size: 3.5rem;
+  }
+
+  .greeting-1 {
+    font-size: 18px;
+  }
+
+  .greeting-2 {
+    font-size: 16px;
+  }
+
+  #countdown {
+    gap: 0.5rem !important;
+  }
+
+  #countdown > div {
+    padding: 0.5rem !important;
+    min-width: 62px;
+  }
+
+  #countdown .fs-2 {
+    font-size: 1.25rem !important;
+  }
+
+  .section-bg {
+    max-width: 30%;
+    opacity: 0.2;
+  }
+
+  .mempelai-section {
+    padding: 0px 16px;
+  }
+
+  .mempelai-section > p {
+    text-align: center;
+  }
+
+  .couple-card {
+    padding: 1.5rem !important;
+  }
+
+  .title-detail {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0;
+  }
+
+  .detail-acara > .d-flex {
+    gap: 1.5rem !important;
+  }
+
+  .detail-acara > div:last-child {
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+
+  .kisah-kami {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .timeline-wrap {
+    padding: 0;
+  }
+
+  .timeline-wrap > .d-flex {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .timeline-wrap > .d-flex:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .story {
+    width: 100%;
+  }
+
+  .rsvp {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .rsvp .w-25 {
+    width: 100% !important;
+  }
+
+  .galeri-kenangan {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #carouselExampleControlsNoTouching .carousel-item img {
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .tanda-kasih > .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rekening {
+    width: min(23rem, 90vw);
+  }
+
+  .rekening p {
+    font-size: 14px;
+  }
+
+  .terimakasih {
+    height: 50vh;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
